@@ -55,7 +55,6 @@ class AppShell(QStackedWidget):
             self.setCurrentIndex(self.PAGE_ALUMNO)
 
     def _logout(self):
-        """Cierra la sesión y vuelve al login"""
         self.login_view.clear_password()
         self.login_view.txt_usuario.clear()
         self.setCurrentIndex(self.PAGE_LOGIN)
