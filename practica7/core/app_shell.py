@@ -28,16 +28,16 @@ class AppShell(QStackedWidget):
             on_success=self._go_to_role_view
         )
 
-        self.addWidget(self.login_view)  # PAGE_LOGIN
-        self.addWidget(self.admin_view)  # PAGE_ADMIN
-        self.addWidget(self.maestro_view)  # PAGE_MAESTRO
-        self.addWidget(self.alumno_view)  # PAGE_ALUMNO
+        self.addWidget(self.login_view)  
+        self.addWidget(self.admin_view)  
+        self.addWidget(self.maestro_view)  
+        self.addWidget(self.alumno_view)  
 
         self.setCurrentIndex(self.PAGE_LOGIN)
         self.setWindowTitle("Sistema Educativo - MVP")
         self.resize(640, 480)
 
-        # Conectar botones de cerrar sesión
+        
         self.admin_view.btn_cerrar_sesion.clicked.connect(self._logout)
         self.maestro_view.btn_cerrar_sesion.clicked.connect(self._logout)
         self.alumno_view.btn_cerrar_sesion.clicked.connect(self._logout)

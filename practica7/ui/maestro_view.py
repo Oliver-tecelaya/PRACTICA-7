@@ -7,17 +7,17 @@ class MaestroView(QWidget):
         self.setWindowTitle("Panel del Maestro")
         self.resize(600, 400)
 
-        # Título
+    
         self.lbl_titulo = QLabel("Panel del Maestro")
         self.lbl_titulo.setAlignment(Qt.AlignCenter)
         self.lbl_titulo.setStyleSheet("font-size: 20px; font-weight: bold; color: #1565C0;")
 
-        #informacion
+        
         self.lbl_bienvenida = QLabel()
         self.lbl_bienvenida.setAlignment(Qt.AlignCenter)
         self.lbl_bienvenida.setStyleSheet("font-size: 14px; margin: 10px;")
 
-        # Cursos
+        
         group_cursos = QGroupBox("Mis Cursos")
         group_cursos.setStyleSheet("QGroupBox { font-weight: bold; font-size: 14px; }")
 
@@ -33,7 +33,7 @@ class MaestroView(QWidget):
         layout_cursos.addWidget(self.lista_cursos)
         group_cursos.setLayout(layout_cursos)
 
-        # Tareas
+        
         group_tareas = QGroupBox("Tareas por Calificar")
         group_tareas.setStyleSheet("QGroupBox { font-weight: bold; font-size: 14px; }")
 

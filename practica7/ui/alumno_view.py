@@ -7,17 +7,17 @@ class AlumnoView(QWidget):
         self.setWindowTitle("Panel del Alumno")
         self.resize(600, 400)
 
-        # Título
+        
         self.lbl_titulo = QLabel("Panel del Alumno")
         self.lbl_titulo.setAlignment(Qt.AlignCenter)
         self.lbl_titulo.setStyleSheet("font-size: 20px; font-weight: bold; color: #2E7D32;")
 
-        # Información
+        
         self.lbl_bienvenida = QLabel()
         self.lbl_bienvenida.setAlignment(Qt.AlignCenter)
         self.lbl_bienvenida.setStyleSheet("font-size: 14px; margin: 10px;")
 
-        # materias
+        
         group_materias = QGroupBox("Mis Materias")
         group_materias.setStyleSheet("QGroupBox { font-weight: bold; font-size: 14px; }")
 
@@ -33,7 +33,7 @@ class AlumnoView(QWidget):
         layout_materias.addWidget(self.lista_materias)
         group_materias.setLayout(layout_materias)
 
-        # cal
+        
         group_calificaciones = QGroupBox("Mis Calificaciones")
         group_calificaciones.setStyleSheet("QGroupBox { font-weight: bold; font-size: 14px; }")
 
@@ -52,7 +52,7 @@ class AlumnoView(QWidget):
         layout_calificaciones.addWidget(self.tabla_calificaciones)
         group_calificaciones.setLayout(layout_calificaciones)
 
-        # Botones de acción
+        
         self.btn_ver_tareas = QPushButton("Ver Tareas Pendientes")
         self.btn_ver_horario = QPushButton("Ver Horario")
         self.btn_cerrar_sesion = QPushButton("Cerrar Sesión")
@@ -63,7 +63,7 @@ class AlumnoView(QWidget):
         layout_botones.addWidget(self.btn_ver_horario)
         layout_botones.addWidget(self.btn_cerrar_sesion)
 
-        # Layout principal
+        
         layout = QVBoxLayout(self)
         layout.addWidget(self.lbl_titulo)
         layout.addWidget(self.lbl_bienvenida)

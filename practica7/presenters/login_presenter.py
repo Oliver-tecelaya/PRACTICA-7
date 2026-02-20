@@ -11,7 +11,7 @@ class LoginPresenter:
         result = self.auth.login(username, password)
         if result.ok:
             self.view.show_info(result.message)
-            self.on_success(result.user)  # Pasamos el objeto user completo
+            self.on_success(result.user)  
         else:
             self.view.show_error(result.message)
             self.view.clear_password()
